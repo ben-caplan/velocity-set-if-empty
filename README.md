@@ -19,6 +19,6 @@ The only problem is that I need to write that 30+ times and that can get kind of
 
 To use this include the above code (also found in this repo's VTL file) and then use the following call:
 
-	setIfEmpty( 'name' 'Ben')##
+	#setIfEmpty( 'name' 'Ben')##
 
 In this example name will become $name and will have a value of "Ben". Problem solved! 
