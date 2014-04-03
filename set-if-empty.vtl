@@ -1,0 +1,16 @@
+## MACRO
+#macro( setIfEmpty $var $value )##
+  #if( !$UtilMethods.isSet($!context.get($var)) )##
+    #set( $_dummy = $context.put($var, $value ) )##
+  #end##
+#end##
+
+
+## USE
+#setIfEmpty( 'name' 'Ben')##
+$name ## prints "Ben"
+
+
+#set( $phone = '555-5555' )##
+#setIfEmpty( 'phone' '123-4567')##
+$phone ## prints "555-5555"
